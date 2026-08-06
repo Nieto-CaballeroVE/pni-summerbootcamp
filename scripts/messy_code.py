@@ -55,4 +55,4 @@ def count_words_in_file(in_file, out_file):
             f.write(k + "," + str(count_words_dict[k]) + "\n")
 
 
-count_words_in_file("/Users/vn0027/Projects/pni-summerbootcamp/data/moby_dick.txt", "/Users/vn0027/Projects/pni-summerbootcamp/data/countwords_mobydick.txt")
+count_words_in_file("/Users/vn0027/Projects/pni-summerbootcamp/data/moby_dick.txt", "/Users/vn0027/Projects/pni-summerbootcamp/results/countwords_mobydick.txt")
