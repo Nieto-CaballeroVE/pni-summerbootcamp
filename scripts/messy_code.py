@@ -10,7 +10,7 @@ Your job:
      count_words_in_file(in_file, out_file) wrapper.
 """
 
-
+'''
 def count_words_in_file(in_file, out_file):
     counts = {}
     with open(in_file, 'r') as f:
@@ -26,3 +26,29 @@ def count_words_in_file(in_file, out_file):
     with open(out_file, 'w') as f:
         for k in counts.keys():
             f.write(k + "," + str(counts[k]) + "\n")
+
+Smells:
+function doing more than one thing,
+not well documented
+'''
+
+def count_words(text):
+    """Given a text file """
+    counts = {}
+    with open(text, 'r') as f:
+        for line in file:
+            # Split words on spaces.
+            W = line.lower().split(' ')
+            for w in W:
+                if w != '':
+                    if w in counts:
+                        counts[w] += 1
+                    else:
+                        counts[w] = 0
+    return counts
+
+def count_words_in_file(in_file, out_file):
+    """Given a text file, count words in file """
+    with open(out_file, 'w') as f:
+        for k in count_words(in_file).keys():
+            f.write(k + "," + str(count_words[k]) + "\n")
